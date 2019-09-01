@@ -3,3 +3,27 @@
 
   display: flex;
 }
+
+.menu__link {
+  display: block;
+
+  padding: 12.5px 11px;
+
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #717171;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  &:hover {
+    font-weight: 700;
+    color: black;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: rgba($color: $aqua, $alpha: 0.2);
+  }
+}

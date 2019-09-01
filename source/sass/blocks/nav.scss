@@ -1,1 +1,19 @@
+.nav {
+  display: flex;
+  align-items: center;
+}
 
+.nav__logo {
+  @include logo;
+
+  margin-right: 48px;
+}
+
+.nav__logo-img {
+  width: 141px;
+  height: 60px;
+}
+
+.nav__box {
+  display: none;
+}

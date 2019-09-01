@@ -12,3 +12,16 @@
 
   list-style: none;
 }
+
+@mixin logo {
+  display: block;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

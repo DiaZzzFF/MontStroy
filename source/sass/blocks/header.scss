@@ -1,6 +1,5 @@
 .headrer {
   width: 100%;
-  min-height: 100px;
 
   background-color: #fbfbfb;
 }
@@ -10,15 +9,18 @@
   align-items: center;
 
   max-width: 1170px;
+  min-height: 100px;
 
   @include wrapper;
   @include outline;
 }
 
 .header__tel {
-  display: block;
+  display: flex;
+  align-items: center;
 
   width: 180px;
+  height: 45px;
   margin-left: auto;
   padding: 0 10px;
 
@@ -54,5 +56,9 @@
   &:hover {
     background-color: rgb(0, 255, 215);
     box-shadow: 0 2px 4.75px 0.25px rgba(0, 255, 215, 0.6);
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
