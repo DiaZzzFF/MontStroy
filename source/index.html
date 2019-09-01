@@ -16,8 +16,84 @@
     <link rel="preload" href="fonts/circe-regular.woff2" as="font">
 
     <link rel="stylesheet" href="css/style.min.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
   </head>
   <body>
-    <h1>Добро пожаловать в Лигу А.</h1>
+  <!-- <<<<<<<<<<<<<<< sprite >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <div style="display:none;">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+
+  <!-- <<<<<<<<<<<<<<< header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <header class="header">
+      <div class="header__wrapper">
+        <nav class="header__nav nav nav--closed nav--nojs">
+          <a class="nav__logo">
+            <picture>
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/logo-tablet.webp 1x, img/logo-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-desktop.webp 1x, img/logo-desktop@2x.webp 2x">
+
+              <source media="(max-width: 1199px)" srcset="img/logo-tablet.png 1x, img/logo-tablet@2x.png 2x">
+              <img class="nav__logo-img" src="img/logo-desktop.png" srcset="img/logo-desktop@2x.png 2x" alt="Логотип MontStroy">
+            </picture>
+          </a>
+
+          <ul class="nav__list menu">
+            <li class="menu__item">
+              <a class="menu__link">
+                Главная
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Услуги
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Проекты
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Партнеры
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a class="header__tel" href="tel:+74954526723" aria-label="Позвонить сейчас">
+          +7 (495) 452-67-23
+        </a>
+
+        <button class="header__btn" type="button" aria-label="Переход к форме обратной связи">
+          Обратная связь
+        </button>
+      </div>
+    </header>
+
+  <!-- <<<<<<<<<<<<<<< main >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <main class="main">
+
+    </main>
+
+  <!-- <<<<<<<<<<<<<<< footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <footer class="footer">
+
+    </footer>
+
+    <script src="js/picturefill.min.js"></script>
+    <script src="js/animatescroll.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

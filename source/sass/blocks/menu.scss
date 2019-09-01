@@ -1,0 +1,5 @@
+.menu {
+  @include ul-style;
+
+  display: flex;
+}

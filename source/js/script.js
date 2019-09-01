@@ -1,4 +1,15 @@
 'use strict';
+
+(function () {
+  var myBody = document.querySelector('body');
+  var myBtnHeader = myBody.querySelector('.header__btn');
+
+  myBtnHeader.addEventListener('click', function () {
+    $('.footer').animatescroll(); // временно
+  });
+})();
+
+/*
 var pageHeader = document.querySelector('.page-header');
 var headerToggle = document.querySelector('.page-header__toggle');
 
@@ -12,4 +23,4 @@ headerToggle.addEventListener('click', function () {
     pageHeader.classList.add('page-header--closed');
     pageHeader.classList.remove('page-header--opened');
   }
-});
+}); */
