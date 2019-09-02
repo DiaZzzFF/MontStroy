@@ -6,7 +6,8 @@
 
 .nav__logo,
 .nav__logo-img {
-  width: 141px;
+  min-width: 141px;
+  max-width: 141px;
   height: 60px;
 }
 
@@ -25,7 +26,8 @@
 @media (max-width: $tablet-width) {
   .nav__logo,
   .nav__logo-img {
-    width: 86px;
+    min-width: 86px;
+    max-width: 86px;
     height: 37px;
   }
 

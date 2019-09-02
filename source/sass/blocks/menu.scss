@@ -2,7 +2,17 @@
   @include ul-style;
 
   display: flex;
+  flex-wrap: wrap;
+
+  min-width: 330px;
+  max-width: 600px;
   padding-top: 6.5px;
+}
+
+.menu__item {
+  max-width: 150px;
+
+  overflow: auto;
 }
 
 .menu__link {
@@ -39,11 +49,12 @@
 
     flex-direction: column;
 
+    max-width: 100%;
     padding-top: 0;
   }
 
   .menu__item {
-    width: 207px;
+    max-width: 207px;
 
     text-align: center;
 
@@ -92,7 +103,7 @@
   }
 
   .menu__item {
-    width: 100%;
+    max-width: 100%;
     min-width: 320px;
   }
 }
