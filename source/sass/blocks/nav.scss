@@ -1,6 +1,13 @@
 .nav {
+  position: relative;
+
   display: flex;
-  align-items: center;
+}
+
+.nav__logo,
+.nav__logo-img {
+  width: 141px;
+  height: 60px;
 }
 
 .nav__logo {
@@ -9,11 +16,111 @@
   margin-right: 48px;
 }
 
-.nav__logo-img {
-  width: 141px;
-  height: 60px;
+.nav__toggle {
+  display: none;
 }
 
-.nav__box {
-  display: none;
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $tablet-width) {
+  .nav__logo,
+  .nav__logo-img {
+    width: 86px;
+    height: 37px;
+  }
+
+  .nav__logo {
+    margin-right: 25px;
+  }
+
+  .nav__toggle {
+    position: relative;
+
+    display: block;
+
+    width: 52px;
+    height: 40px;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $aqua;
+    }
+  }
+
+  .nav--closed .nav__toggle {
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 11px;
+      left: 13px;
+
+      width: 26px;
+      height: 2px;
+
+      background-color: #afafaf;
+      box-shadow: 0 8px 0 0 #afafaf, 0 16px 0 0 #afafaf;
+    }
+
+    &:hover::before {
+      background-color: black;
+      box-shadow: 0 8px 0 0 black, 0 16px 0 0 black;
+    }
+
+    &:active::before {
+      background-color: black;
+      box-shadow: 0 8px 0 0 black, 0 16px 0 0 black;
+    }
+  }
+
+  .nav--opened .nav__toggle {
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 20px;
+      left: 13px;
+
+      width: 27px;
+      height: 2px;
+
+      background-color: #afafaf;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: black;
+    }
+  }
+
+  .nav--opened .nav__toggle--close {
+    display: block;
+  }
+
+  .nav--closed .nav__list {
+    background-color: transparent;
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< js-menu >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $tablet-width) {
+  .nav--closed .menu__item {
+    display: none;
+  }
 }

@@ -1,4 +1,4 @@
-.headrer {
+.header {
   width: 100%;
 
   background-color: #fbfbfb;
@@ -6,21 +6,27 @@
 
 .header__wrapper {
   display: flex;
-  align-items: center;
 
   max-width: 1170px;
   min-height: 100px;
+  padding-top: 20px;
 
   @include wrapper;
   @include outline;
+}
+
+.header__tel,
+.header__btn {
+  height: 45px;
+  margin-top: 6px;
 }
 
 .header__tel {
   display: flex;
   align-items: center;
 
-  width: 180px;
-  height: 45px;
+  min-width: 180px;
+
   margin-left: auto;
   padding: 0 10px;
 
@@ -43,7 +49,6 @@
 
 .header__btn {
   width: 191px;
-  height: 45px;
   margin-left: 15px;
 
   font-size: 16px;
@@ -60,5 +65,26 @@
 
   &:active {
     opacity: 0.5;
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $tablet-width) {
+  .header__wrapper {
+    min-height: 52px;
+    padding: 8px 64px 0;
+  }
+
+  .header__tel {
+    width: 145px;
+    height: 40px;
+    margin-top: 0;
+
+    font-size: 14px;
+  }
+
+  .header__btn {
+    display: none;
   }
 }
