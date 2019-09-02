@@ -80,3 +80,19 @@
     }
   }
 }
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $mobile-width) {
+  .menu {
+    top: 43px;
+    left: 0;
+
+    width: 100%;
+  }
+
+  .menu__item {
+    width: 100%;
+    min-width: 320px;
+  }
+}
