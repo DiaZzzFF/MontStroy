@@ -4,7 +4,9 @@
   var myBody = document.querySelector('body');
   var myNav = myBody.querySelector('.nav');
   var myBtnNavToggle = myNav.querySelector('.nav__toggle');
-  var myBtnHeader = myBody.querySelector('.header__btn');
+  var myBtnHeaderFeedback = myBody.querySelector('.header__btn-feedback');
+  var myBtnPromoFeedback = myBody.querySelector('.promo__btn-feedback');
+  var myBtnPromoServices = myBody.querySelector('.promo__btn-services');
 
   myNav.classList.remove('nav--nojs');
 
@@ -19,7 +21,15 @@
     }
   });
 
-  myBtnHeader.addEventListener('click', function () {
+  myBtnHeaderFeedback.addEventListener('click', function () {
     $('.footer').animatescroll(); // временно
+  });
+
+  myBtnPromoFeedback.addEventListener('click', function () {
+    $('.footer').animatescroll(); // временно
+  });
+
+  myBtnPromoServices.addEventListener('click', function () {
+    $('.services').animatescroll();
   });
 })();

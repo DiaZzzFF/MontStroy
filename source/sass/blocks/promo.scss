@@ -1,0 +1,87 @@
+.promo {
+  width: 100%;
+
+  background-color: black;
+  background-image: url("../img/bg-banner-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-banner-desktop@2x.jpg");
+    background-size: 1920px auto;
+  }
+}
+
+.promo__wrapper {
+  @include wrapper;
+  @include outline;
+
+  max-width: 1170px;
+  min-height: 935px;
+  padding-top: 151px;
+}
+
+.promo__heading {
+  margin: 0;
+  margin-bottom: 23px;
+
+  font-size: 72px;
+  font-weight: 900;
+  font-family: "Raleway", "Arial", sans-serif;
+  color: #fffffe;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+
+.promo__text {
+  width: 87%;
+  margin: 0;
+  margin-bottom: 53px;
+
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 500;
+  color: #fffffe;
+}
+
+.promo__text-color {
+  color: $aqua;
+}
+
+.promo__btn-services,
+.promo__btn-feedback {
+  min-width: 300px;
+  max-width: 300px;
+  height: 56px;
+
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  overflow: auto;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 2px 6.3px 0.7px rgba($color: $aqua, $alpha: 0.65);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.promo__btn-services {
+  margin-right: 21px;
+
+  background-color: $aqua;
+  border: none;
+}
+
+.promo__btn-feedback {
+  color: white;
+
+  background-color: transparent;
+  border: 1px solid rgb(151, 255, 244);
+  box-shadow: 0 2px 2.7px 0.3px rgba($color: $aqua, $alpha: 0.27);
+}

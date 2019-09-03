@@ -16,7 +16,7 @@
 }
 
 .header__tel,
-.header__btn {
+.header__btn-feedback {
   height: 45px;
   margin-top: 6px;
 
@@ -49,7 +49,7 @@
   }
 }
 
-.header__btn {
+.header__btn-feedback {
   min-width: 191px;
   max-width: 191px;
   margin-left: 15px;
@@ -87,7 +87,7 @@
     font-size: 14px;
   }
 
-  .header__btn {
+  .header__btn-feedback {
     display: none;
   }
 }
