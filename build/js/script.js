@@ -32,4 +32,7 @@
   myBtnPromoServices.addEventListener('click', function () {
     $('.services').animatescroll();
   });
+
+  var $div = $('.promo__text').clone();
+  $('.advantages__text').html($div);
 })();

@@ -33,7 +33,13 @@
   letter-spacing: 3.6px;
 }
 
+.promo__text-mobile {
+  display: none;
+}
+
 .promo__text {
+  @include outline;
+
   width: 87%;
   margin: 0;
   margin-bottom: 53px;
@@ -91,15 +97,15 @@
 @media (max-width: $tablet-width) {
   .promo {
     background-image: url("../img/bg-banner-tablet.jpg");
+    background-position: right;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-banner-tablet@2x.jpg");
-      background-size: 768 auto;
+      background-size: 768px auto;
     }
   }
 
   .promo__wrapper {
-    max-width: 768px;
     min-height: 600px;
     padding: 125px 75px 0 83px;
   }
@@ -132,5 +138,82 @@
 
   .promo__btn-services {
     margin-right: 17px;
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $mobile-width) {
+  .promo {
+    background-image: url("../img/bg-banner-mobile.jpg");
+    background-position: right;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-banner-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
+  }
+
+  .promo__wrapper {
+    min-height: 465px;
+    padding: 128px 20px 0;
+
+    text-align: center;
+  }
+
+  .promo__heading {
+    @include wrapper;
+
+    width: 280px;
+    margin-bottom: 21px;
+
+    font-size: 16px;
+    letter-spacing: 0.9px;
+  }
+
+  .promo__text-mobile {
+    display: block;
+
+    margin: 0;
+    margin-bottom: 58px;
+
+    font-size: 16px;
+    color: #fffffe;
+  }
+
+  .promo__text {
+    @include wrapper;
+
+    display: none;
+
+    width: 100%;
+    margin-bottom: 40px;
+
+    font-size: 12px;
+    line-height: 18px;
+    color: black;
+    text-align: left;
+
+    background-color: white;
+  }
+
+  .promo__text-color {
+    &--mobile {
+      color: inherit;
+    }
+  }
+
+  .promo__btn-services,
+  .promo__btn-feedback {
+    min-width: 280px;
+    max-width: 280px;
+    height: 60px;
+    margin-bottom: 10px;
+
+    font-size: 16px;
+  }
+
+  .promo__btn-services {
+    margin-right: 0;
   }
 }
