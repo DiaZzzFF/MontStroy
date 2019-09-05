@@ -33,6 +33,9 @@
     $('.services').animatescroll();
   });
 
-  var $div = $('.promo__text').clone();
-  $('.advantages__text').html($div);
+  var $div1 = $('.promo__text').clone();
+  $('.promo__text-box').html($div1);
+
+  var $div2 = $('.advantages').clone();
+  $('.promo__advantages-box').html($div2);
 })();

@@ -1,5 +1,9 @@
 .promo {
   width: 100%;
+}
+
+.promo__bg {
+  width: 100%;
 
   background-color: black;
   background-image: url("../img/bg-banner-desktop.jpg");
@@ -12,7 +16,7 @@
   }
 }
 
-.promo__wrapper {
+.promo__wrapper-1 {
   @include wrapper;
   @include outline;
 
@@ -59,6 +63,7 @@
   min-width: 300px;
   max-width: 300px;
   height: 56px;
+  margin-bottom: 114px;
 
   font-size: 20px;
   line-height: 26px;
@@ -92,10 +97,15 @@
   box-shadow: 0 2px 2.7px 0.3px rgba($color: $aqua, $alpha: 0.27);
 }
 
+.promo__text-box,
+.promo__advantages-box {
+  display: none;
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $tablet-width) {
-  .promo {
+  .promo__bg {
     background-image: url("../img/bg-banner-tablet.jpg");
     background-position: right;
 
@@ -105,7 +115,7 @@
     }
   }
 
-  .promo__wrapper {
+  .promo__wrapper-1 {
     min-height: 600px;
     padding: 125px 75px 0 83px;
   }
@@ -139,12 +149,26 @@
   .promo__btn-services {
     margin-right: 17px;
   }
+
+  .promo__advantages {
+    display: none;
+  }
+
+  .promo__advantages-box {
+    @include outline;
+
+    display: block;
+
+    &--clone .advantages {
+      display: block;
+    }
+  }
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $mobile-width) {
-  .promo {
+  .promo__bg {
     background-image: url("../img/bg-banner-mobile.jpg");
     background-position: right;
 
@@ -154,7 +178,7 @@
     }
   }
 
-  .promo__wrapper {
+  .promo__wrapper-1 {
     min-height: 465px;
     padding: 128px 20px 0;
 
@@ -215,5 +239,19 @@
 
   .promo__btn-services {
     margin-right: 0;
+  }
+
+  .promo__wrapper-2 {
+    padding: 35px 20px 0 24px;
+  }
+
+  .promo__text-box {
+    @include outline;
+
+    display: block;
+
+    &--clone .promo__text {
+      display: block;
+    }
   }
 }
