@@ -6,7 +6,7 @@
 
 .header__wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
 
   max-width: 1170px;
   min-height: 100px;
@@ -64,6 +64,8 @@
   &:hover {
     background-color: rgb(0, 255, 215);
     box-shadow: 0 2px 4.75px 0.25px rgba(0, 255, 215, 0.6);
+
+    cursor: pointer;
   }
 
   &:active {

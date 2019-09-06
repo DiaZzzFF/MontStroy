@@ -52,6 +52,7 @@
 
 @media (max-width: $tablet-width) {
   .advantages {
+    width: 800px;
     height: 300px;
     padding: 50px;
   }
@@ -59,9 +60,11 @@
   .advantages__item {
     @include outline;
 
-    height: 163px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    text-align: center;
+    height: 163px;
 
     background-color: brown;
 
@@ -85,21 +88,8 @@
     }
   }
 
-  .swiper-container {
-    width: 800px;
-    height: 300px;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #929191;
-
-    border: 1px solid green;
-
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .advantages__pagination {
+    width: 300px;
+    height: 50px;
   }
 }

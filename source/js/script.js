@@ -39,20 +39,22 @@
   var $div2 = $('.advantages').clone();
   $('.promo__advantages-box').html($div2);
 
-  var mySwiper1 = new Swiper('.promo__advantages-box .swiper-container', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    initialSlide: 1,
-    slideToClickedSlide: true,
-    centeredSlides: true,
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
+  $(window).resize(function () {
+    if ($(window).width() < 1200) {
+      $('.promo__advantages-box .advantages').addClass('swiper-container');
+      $('.promo__advantages-box .advantages__list').addClass('swiper-wrapper');
+      $('.promo__advantages-box .advantages__item').addClass('swiper-slide');
+      $('.promo__advantages-box .advantages__pagination').addClass('swiper-pagination');
+
+    } else {
+      $('.advantages').removeClass('swiper-container');
+      $('.advantages__list').removeClass('swiper-wrapper');
+      $('.advantages__item').removeClass('swiper-slide');
+      $('.advantages__pagination').removeClass('swiper-pagination');
+    }
   });
 
-  var mySwiper2 = new Swiper('.swiper-container', {
+  var mySwiper = new Swiper('.promo__advantages-box .swiper-container', {
     slidesPerView: 3,
     spaceBetween: 30,
     initialSlide: 1,
@@ -65,3 +67,5 @@
     },
   });
 })();
+
+
