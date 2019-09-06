@@ -38,4 +38,30 @@
 
   var $div2 = $('.advantages').clone();
   $('.promo__advantages-box').html($div2);
+
+  var mySwiper1 = new Swiper('.promo__advantages-box .swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    initialSlide: 1,
+    slideToClickedSlide: true,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  var mySwiper2 = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    initialSlide: 1,
+    slideToClickedSlide: true,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
 })();

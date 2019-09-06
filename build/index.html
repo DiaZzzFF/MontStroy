@@ -153,11 +153,11 @@
             <button class="promo__btn-services" type="button" aria-label="Прокрутить к разделу Услуги">Наши услуги</button>
             <button class="promo__btn-feedback" type="button" aria-label="Прокрутить к форме обратной связи">Связаться с нами</button>
 
-            <section class="promo__advantages advantages">
+            <section class="promo__advantages advantages swiper-container">
               <h3 class="visually-hidden">Преимущества</h3>
 
-              <ul class="advantages__list">
-                <li class="advantages__item advantages__item--like">
+              <ul class="advantages__list swiper-wrapper">
+                <li class="advantages__item advantages__item--like swiper-slide">
                   <svg class="advantages__svg" width="62" height="64"><use xlink:href="#icon-like"></use></svg>
 
                   <p class="advantages__text">
@@ -182,6 +182,8 @@
                   </p>
                 </li>
               </ul>
+
+              <div class="swiper-pagination"></div>
             </section>
           </div>
         </div>
@@ -190,6 +192,16 @@
           <div class="promo__text-box promo__text-box--clone"></div>
 
           <div class="promo__advantages-box promo__advantages-box--clone"></div>
+        </div>
+
+
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
 
@@ -208,6 +220,7 @@
 
     <script src="js/picturefill.min.js"></script>
     <script src="js/animatescroll.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
