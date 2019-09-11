@@ -33,39 +33,73 @@
     $('.services').animatescroll();
   });
 
-  var $div1 = $('.promo__text').clone();
-  $('.promo__text-box').html($div1);
+  var currentBreakpoint = '';
+  var swiperAdvantages;
 
-  var $div2 = $('.advantages').clone();
-  $('.promo__advantages-box').html($div2);
-
-  $(window).resize(function () {
-    if ($(window).width() < 1200) {
-      $('.promo__advantages-box .advantages').addClass('swiper-container');
-      $('.promo__advantages-box .advantages__list').addClass('swiper-wrapper');
-      $('.promo__advantages-box .advantages__item').addClass('swiper-slide');
-      $('.promo__advantages-box .advantages__pagination').addClass('swiper-pagination');
-
-    } else {
-      $('.advantages').removeClass('swiper-container');
-      $('.advantages__list').removeClass('swiper-wrapper');
-      $('.advantages__item').removeClass('swiper-slide');
-      $('.advantages__pagination').removeClass('swiper-pagination');
-    }
-  });
-
-  var mySwiper = new Swiper('.promo__advantages-box .swiper-container', {
+  var tabletSwiperConfigAdvantages = {
+    init: false,
     slidesPerView: 3,
-    spaceBetween: 30,
-    initialSlide: 1,
-    slideToClickedSlide: true,
+    spaceBetween: 0,
     centeredSlides: true,
+    effect: 'coverflow',
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.advantages__toggles',
       clickable: true,
     },
-  });
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    }
+  };
+
+  var mobileSwiperConfigAdvantages = {
+    init: false,
+    slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 0,
+    pagination: {
+      el: '.advantages__toggles',
+      clickable: true,
+    },
+  };
+
+  function initSwiper() {
+    if (window.matchMedia('(max-width: 767px)').matches && currentBreakpoint !== 'mobile') {
+      currentBreakpoint = 'mobile';
+
+      if (swiperAdvantages) {
+        swiperAdvantages.destroy();
+      }
+      swiperAdvantages = new Swiper('.swiper-container-features', mobileSwiperConfigAdvantages);
+      swiperAdvantages.init();
+    }
+
+    if (window.matchMedia('(min-width: 768px) and (max-width: 1199px)').matches && currentBreakpoint !== 'tablet') {
+      currentBreakpoint = 'tablet';
+
+      if (swiperAdvantages) {
+        swiperAdvantages.destroy();
+      }
+      swiperAdvantages = new Swiper('.swiper-container-features', tabletSwiperConfigAdvantages);
+      swiperAdvantages.init();
+    }
+
+    if (window.matchMedia('(min-width: 1200px)').matches && currentBreakpoint !== 'desktop') {
+      currentBreakpoint = 'desktop';
+
+      if (swiperAdvantages) {
+        swiperAdvantages.destroy();
+      }
+    }
+  }
+
+  initSwiper();
+
+  window.addEventListener('resize', initSwiper);
 })();
 
 

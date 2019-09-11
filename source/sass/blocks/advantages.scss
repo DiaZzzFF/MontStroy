@@ -2,20 +2,24 @@
   width: 100%;
 }
 
+.advantages__wrapper {
+  @include wrapper;
+
+  max-width: 1227.5px;
+  padding-left: 29px;
+  padding-right: 15px;
+}
+
 .advantages__list {
   @include ul-style;
-  @include wrapper;
 
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .advantages__item {
   @include outline;
-
-  height: 150px;
-
-  text-align: center;
 
   &--like {
     width: 192px;
@@ -24,17 +28,20 @@
 
   &--handshake {
     width: 175px;
-    margin-left: 18px;
+    margin-left: 16px;
     padding-top: 20px;
   }
 
   &--settings {
     width: 235px;
-    margin-right: -11px;
+    margin-right: 2px;
   }
 }
 
 .advantages__svg {
+  @include wrapper;
+
+  display: block;
   margin-bottom: 20px;
 
   fill: rgba($color: white, $alpha: 0.7);
@@ -46,9 +53,14 @@
   font-size: 15px;
   line-height: 20px;
   color: rgba($color: white, $alpha: 0.6);
+  text-align: center;
 }
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.advantages__toggles--hidden {
+  display: none;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 @media (max-width: $tablet-width) {
   .advantages {
@@ -93,3 +105,4 @@
     height: 50px;
   }
 }
+*/

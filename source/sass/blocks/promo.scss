@@ -1,14 +1,11 @@
 .promo {
   width: 100%;
-}
-
-.promo__bg {
-  width: 100%;
+  min-height: 935px;
 
   background-color: black;
   background-image: url("../img/bg-banner-desktop.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center -100px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-banner-desktop@2x.jpg");
@@ -16,12 +13,11 @@
   }
 }
 
-.promo__wrapper-1 {
+.promo__wrapper {
   @include wrapper;
   @include outline;
 
   max-width: 1170px;
-  min-height: 935px;
   padding-top: 151px;
 }
 
@@ -102,7 +98,7 @@
   display: none;
 }
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 @media (max-width: $tablet-width) {
   .promo__bg {
@@ -165,7 +161,7 @@
   }
 }
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 @media (max-width: $mobile-width) {
   .promo__bg {
@@ -255,3 +251,5 @@
     }
   }
 }
+
+*/
