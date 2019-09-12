@@ -5,104 +5,184 @@
 .advantages__wrapper {
   @include wrapper;
 
-  max-width: 1227.5px;
-  padding-left: 29px;
-  padding-right: 15px;
+  max-width: 1222px;
+  padding-right: 11px;
 }
 
 .advantages__list {
   @include ul-style;
 
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .advantages__item {
-  @include outline;
+  width: 20%;
+}
 
-  &--like {
-    width: 192px;
-    padding-top: 5px;
-  }
-
-  &--handshake {
-    width: 175px;
-    margin-left: 16px;
-    padding-top: 20px;
-  }
-
-  &--settings {
-    width: 235px;
-    margin-right: 2px;
-  }
+.advantages__box {
+  display: flex;
+  flex-direction: column;
 }
 
 .advantages__svg {
   @include wrapper;
 
-  display: block;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
   fill: rgba($color: white, $alpha: 0.7);
 }
 
 .advantages__text {
   margin: 0;
+  padding-bottom: 10px;
 
   font-size: 15px;
   line-height: 20px;
-  color: rgba($color: white, $alpha: 0.6);
   text-align: center;
+  color: rgba($color: white, $alpha: 0.6);
 }
 
-.advantages__toggles--hidden {
-  display: none;
-}
-
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $tablet-width) {
-  .advantages {
-    width: 800px;
-    height: 300px;
-    padding: 50px;
+  .advantages__wrapper {
+    max-width: 718px;
+    min-height: 300px;
+    padding-right: 0;
+
+    overflow: hidden;
+  }
+
+  .advantages__list {
+    box-sizing: border-box;
+
+    width: 99%;
+    margin: 0 -56px;
+    margin-bottom: 7px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .advantages__item {
-    @include outline;
+    box-sizing: border-box;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 163px;
-
-    background-color: brown;
-
-    &--like,
-    &--handshake,
-    &--settings {
-      width: 230px;
-    }
-
-    &--like {
-      padding-top: 5px;
-    }
-
-    &--handshake {
-      margin-left: 0;
-      padding-top: 20px;
-    }
-
-    &--settings {
-      margin-right: 0;
-    }
+    min-width: 250px;
+    min-height: 175px;
   }
 
-  .advantages__pagination {
-    width: 300px;
-    height: 50px;
+  .advantages__box {
+    min-height: 177px;
+    padding: 32px 30px;
+    padding-bottom: 35px;
+
+    background-color: white;
+    box-shadow: 0 10px 25px 2px rgba(black, 0.05);
+  }
+
+  .advantages__svg {
+    margin-bottom: 6px;
+
+    fill: #b2b2b2;
+  }
+
+  .advantages__text {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(black, 0.7);
+  }
+
+  .advantages__toggles {
+    position: relative;
+    top: -22px;
+
+    max-width: 6.7%;
+    min-height: 8px;
+    margin: 0 auto;
+  }
+
+  .advantages .swiper-slide-active {
+    min-width: 280px;
+    min-height: 200px;
+  }
+
+  .swiper-slide-active .advantages__box {
+    padding: 0 30px;
+    padding-top: 49px;
+    padding-bottom: 42px;
+
+    box-shadow: 0 10px 20px 10px rgba(black, 0.05);
+  }
+
+  .swiper-slide-active .advantages__svg {
+    width: 89px;
+    height: 59px;
+    margin-bottom: 10px;
+
+    fill: black;
+  }
+
+  .swiper-slide-active .advantages__text {
+    font-size: 14px;
+    line-height: 20px;
+
+    color: black;
   }
 }
-*/
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+@media (max-width: $mobile-width) {
+  .advantages__list {
+    margin-bottom: 5px;
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+
+  .advantages__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .advantages__box {
+    padding: 42px 10px;
+    box-shadow: none;
+    border: 1px solid #dddddd;
+  }
+
+  .advantages__svg {
+    width: 89px;
+    height: 59px;
+    margin-bottom: 17px;
+  }
+
+  .advantages__toggles {
+    position: static;
+    width: 16%;
+  }
+
+  .advantages .swiper-slide {
+    width: 100%;
+  }
+
+  .advantages .swiper-slide-active .advantages__box {
+    padding: 42px 10px;
+    box-shadow: none;
+    border: 1px solid #dddddd;
+  }
+
+  .advantages .swiper-slide-active .advantages__box .advantages__svg {
+    margin-bottom: 17px;
+  }
+
+  .advantages__toggles-item {
+    width: 6px;
+    height: 6px;
+  }
+} */

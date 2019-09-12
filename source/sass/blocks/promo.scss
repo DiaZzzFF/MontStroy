@@ -15,7 +15,6 @@
 
 .promo__wrapper {
   @include wrapper;
-  @include outline;
 
   max-width: 1170px;
   padding-top: 151px;
@@ -98,11 +97,26 @@
   display: none;
 }
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $tablet-width) {
+  .promo {
+    min-height: auto;
+
+    background: none;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: none;
+    }
+  }
+
   .promo__bg {
+    width: 100%;
+    min-height: 600px;
+
+    background-color: black;
     background-image: url("../img/bg-banner-tablet.jpg");
+    background-repeat: no-repeat;
     background-position: right;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -111,8 +125,7 @@
     }
   }
 
-  .promo__wrapper-1 {
-    min-height: 600px;
+  .promo__wrapper {
     padding: 125px 75px 0 83px;
   }
 
@@ -144,20 +157,6 @@
 
   .promo__btn-services {
     margin-right: 17px;
-  }
-
-  .promo__advantages {
-    display: none;
-  }
-
-  .promo__advantages-box {
-    @include outline;
-
-    display: block;
-
-    &--clone .advantages {
-      display: block;
-    }
   }
 }
 
@@ -251,5 +250,4 @@
     }
   }
 }
-
 */

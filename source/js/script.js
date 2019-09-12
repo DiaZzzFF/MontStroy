@@ -40,6 +40,7 @@
     init: false,
     slidesPerView: 3,
     spaceBetween: 0,
+    initialSlide: 1,
     centeredSlides: true,
     effect: 'coverflow',
     loop: true,
@@ -61,6 +62,7 @@
     slidesPerView: 'auto',
     loop: true,
     spaceBetween: 0,
+    initialSlide: 1,
     pagination: {
       el: '.advantages__toggles',
       clickable: true,
@@ -74,7 +76,7 @@
       if (swiperAdvantages) {
         swiperAdvantages.destroy();
       }
-      swiperAdvantages = new Swiper('.swiper-container-features', mobileSwiperConfigAdvantages);
+      swiperAdvantages = new Swiper('.swiper-container-advantages', mobileSwiperConfigAdvantages);
       swiperAdvantages.init();
     }
 
@@ -84,7 +86,7 @@
       if (swiperAdvantages) {
         swiperAdvantages.destroy();
       }
-      swiperAdvantages = new Swiper('.swiper-container-features', tabletSwiperConfigAdvantages);
+      swiperAdvantages = new Swiper('.swiper-container-advantages', tabletSwiperConfigAdvantages);
       swiperAdvantages.init();
     }
 

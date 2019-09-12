@@ -4,3 +4,11 @@
 
   background-color: white;
 }
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $tablet-width) {
+  .main {
+    background-color: $main-tablet-bg;
+  }
+}

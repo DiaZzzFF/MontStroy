@@ -1,0 +1,43 @@
+.toggles--hidden {
+  display: none;
+}
+
+.toggles__item {
+  margin: 0;
+  padding: 0;
+
+  display: block;
+
+  min-height: 8px;
+  height: 8px;
+
+  background-color: #dddddd;
+  border-radius: 50%;
+  border: 2px solid transparent;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggles .swiper-pagination-bullet-active {
+  background-color: $aqua;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $tablet-width) {
+  .toggles {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $mobile-width) {
+  .toggles__item {
+    width: 6px;
+    height: 6px;
+  }
+}
