@@ -37,8 +37,6 @@
 }
 
 .promo__text {
-  @include outline;
-
   width: 87%;
   margin: 0;
   margin-bottom: 53px;
@@ -53,12 +51,18 @@
   color: $aqua;
 }
 
-.promo__btn-services,
-.promo__btn-feedback {
+.promo__swap-item {
+  &:last-of-type {
+    padding-bottom: 96px;
+  }
+}
+
+.promo__btn {
   min-width: 300px;
   max-width: 300px;
   height: 56px;
-  margin-bottom: 114px;
+  margin-right: 18px;
+  margin-bottom: 18px;
 
   font-size: 20px;
   line-height: 26px;
@@ -68,6 +72,19 @@
   overflow: auto;
   cursor: pointer;
 
+  &--services {
+    background-color: $aqua;
+    border: none;
+  }
+
+  &--feedback {
+    color: white;
+
+    background-color: transparent;
+    border: 1px solid rgb(151, 255, 244);
+    box-shadow: 0 2px 2.7px 0.3px rgba($color: $aqua, $alpha: 0.27);
+  }
+
   &:hover {
     box-shadow: 0 2px 6.3px 0.7px rgba($color: $aqua, $alpha: 0.65);
   }
@@ -75,21 +92,6 @@
   &:active {
     opacity: 0.5;
   }
-}
-
-.promo__btn-services {
-  margin-right: 18px;
-
-  background-color: $aqua;
-  border: none;
-}
-
-.promo__btn-feedback {
-  color: white;
-
-  background-color: transparent;
-  border: 1px solid rgb(151, 255, 244);
-  box-shadow: 0 2px 2.7px 0.3px rgba($color: $aqua, $alpha: 0.27);
 }
 
 .promo__text-box,
@@ -117,7 +119,7 @@
     background-color: black;
     background-image: url("../img/bg-banner-tablet.jpg");
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: top right;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-banner-tablet@2x.jpg");
@@ -146,26 +148,24 @@
     font-weight: inherit;
   }
 
-  .promo__btn-services,
-  .promo__btn-feedback {
+  .promo__btn {
     min-width: 290px;
     max-width: 290px;
     height: 55px;
+    margin-right: 17px;
 
     font-size: 16px;
   }
-
-  .promo__btn-services {
-    margin-right: 17px;
-  }
 }
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $mobile-width) {
   .promo__bg {
+    min-height: 465px;
+
     background-image: url("../img/bg-banner-mobile.jpg");
-    background-position: right;
+    background-position: top right;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-banner-mobile@2x.jpg");
@@ -173,17 +173,37 @@
     }
   }
 
-  .promo__wrapper-1 {
-    min-height: 465px;
-    padding: 128px 20px 0;
+  .promo__wrapper {
+    padding: 125px 0 0 0;
 
     text-align: center;
   }
 
-  .promo__heading {
-    @include wrapper;
+  .promo__swap-box {
+    display: flex;
+    flex-direction: column;
+  }
 
-    width: 280px;
+  .promo__swap-item {
+    &:first-of-type {
+      order: 2;
+
+      background-color: white;
+    }
+
+    &:last-of-type {
+      padding-bottom: 42px;
+    }
+  }
+
+  .promo__heading,
+  .promo__text-mobile,
+  .promo__text {
+    @include wrapper;
+  }
+
+  .promo__heading {
+    width: 85%;
     margin-bottom: 21px;
 
     font-size: 16px;
@@ -193,7 +213,7 @@
   .promo__text-mobile {
     display: block;
 
-    margin: 0;
+    width: 85%;
     margin-bottom: 58px;
 
     font-size: 16px;
@@ -201,12 +221,8 @@
   }
 
   .promo__text {
-    @include wrapper;
-
-    display: none;
-
     width: 100%;
-    margin-bottom: 40px;
+    padding: 35px 23px;
 
     font-size: 12px;
     line-height: 18px;
@@ -222,32 +238,13 @@
     }
   }
 
-  .promo__btn-services,
-  .promo__btn-feedback {
+  .promo__btn {
     min-width: 280px;
     max-width: 280px;
     height: 60px;
+    margin-right: 0;
     margin-bottom: 10px;
 
     font-size: 16px;
   }
-
-  .promo__btn-services {
-    margin-right: 0;
-  }
-
-  .promo__wrapper-2 {
-    padding: 35px 20px 0 24px;
-  }
-
-  .promo__text-box {
-    @include outline;
-
-    display: block;
-
-    &--clone .promo__text {
-      display: block;
-    }
-  }
 }
-*/

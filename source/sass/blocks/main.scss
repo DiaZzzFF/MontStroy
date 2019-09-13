@@ -12,3 +12,11 @@
     background-color: $main-tablet-bg;
   }
 }
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $mobile-width) {
+  .main {
+    background-color: white;
+  }
+}

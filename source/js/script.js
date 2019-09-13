@@ -5,8 +5,8 @@
   var myNav = myBody.querySelector('.nav');
   var myBtnNavToggle = myNav.querySelector('.nav__toggle');
   var myBtnHeaderFeedback = myBody.querySelector('.header__btn-feedback');
-  var myBtnPromoFeedback = myBody.querySelector('.promo__btn-feedback');
-  var myBtnPromoServices = myBody.querySelector('.promo__btn-services');
+  var myBtnPromoFeedback = myBody.querySelector('.promo__btn--feedback');
+  var myBtnPromoServices = myBody.querySelector('.promo__btn--services');
 
   myNav.classList.remove('nav--nojs');
 
