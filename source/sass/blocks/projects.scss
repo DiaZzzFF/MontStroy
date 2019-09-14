@@ -18,7 +18,7 @@
   font-weight: 900;
   font-family: "Raleway", "Arial", sans-serif;
   text-transform: uppercase;
-  //letter-spacing: 1px;
+  letter-spacing: 1px;
 
   &::after {
     content: "";
@@ -49,6 +49,8 @@
   margin-bottom: 4px;
 
   &:nth-of-type(n + 5) .projects__heading {
+    margin-bottom: 25px;
+
     font-size: 32px;
     line-height: 42px;
   }
@@ -57,7 +59,15 @@
 .projects__box {
   position: absolute;
 
-  padding: 53px 30px 30px;
+  padding: 53px 14px 30px 30px;
+
+  &--ojsc {
+    padding-right: 95px;
+  }
+
+  &--theater {
+    padding-right: 65px;
+  }
 }
 
 .projects__heading,
@@ -67,8 +77,10 @@
   color: white;
 }
 
-
 .projects__heading {
+  min-height: 48px;
+  margin-bottom: 22px;
+
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
@@ -79,4 +91,37 @@
   line-height: 22px;
 
   color: rgba($color: white, $alpha: 0.6);
+}
+
+.projects__link {
+  position: absolute;
+  bottom: 11px;
+  right: 10px;
+
+  display: block;
+
+  width: 46px;
+  height: 34px;
+
+  text-align: center;
+
+  border: 2px solid rgba($color: white, $alpha: 0.34);
+
+  &:hover {
+    background-color: $aqua;
+  }
+
+  &:hover .projects__link-svg {
+    fill: black;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.projects__link-svg {
+  margin-top: 12px;
+
+  fill: rgba($color: white, $alpha: 0.34);
 }
