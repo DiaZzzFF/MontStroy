@@ -6,29 +6,9 @@
 }
 
 .projects__title {
-  position: relative;
+  @include h2-line;
 
-  margin: 0;
   margin-bottom: 35px;
-
-  font-size: 30px;
-  line-height: 50px;
-  font-weight: 900;
-  font-family: "Raleway", "Arial", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 50%;
-    right: 0;
-
-    width: 871px;
-    height: 2px;
-    background-color: black;
-  }
 }
 
 .projects__list {
