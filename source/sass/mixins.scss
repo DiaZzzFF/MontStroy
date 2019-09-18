@@ -50,3 +50,12 @@
     background-color: black;
   }
 }
+
+@mixin h2-tablet {
+  font-size: 26px;
+  line-height: inherit;
+
+  &::after {
+    width: 0;
+  }
+}

@@ -128,14 +128,9 @@
   }
 
   .projects__title {
+    @include h2-tablet;
+
     margin-bottom: 41px;
-
-    font-size: 26px;
-    line-height: inherit;
-
-    &::after {
-      width: 0;
-    }
   }
 
   .projects__item {

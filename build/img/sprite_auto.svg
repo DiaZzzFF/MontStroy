@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow" viewBox="0 0 16 6">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-down" viewBox="0 0 8 5">
+  <path d="M292,1357h8l-4,5Z" transform="translate(-292 -1357)"/>
+</symbol><symbol id="icon-arrow" viewBox="0 0 16 6">
   <path d="M635,2692v6l4-3Zm-12,2h13v2H623v-2Z" transform="translate(-623 -2692)"/>
 </symbol><symbol id="icon-fb" viewBox="0 0 512 512">
   <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
