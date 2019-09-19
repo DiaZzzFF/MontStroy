@@ -3,6 +3,7 @@
 
   max-width: 1170px;
   min-height: 670px;
+  padding-top: 59px;
 }
 
 .projects__title {
@@ -124,7 +125,7 @@
 @media (max-width: $tablet-width) {
   .projects {
     max-width: 768px;
-    padding: 0 22px;
+    padding: 49px 22px 0;
   }
 
   .projects__title {
@@ -174,7 +175,7 @@
 
 @media (max-width: $mobile-width) {
   .projects {
-    padding: 0 20px;
+    padding: 46px 20px 0;
   }
 
   .projects__title {

@@ -3,6 +3,7 @@
   @include outline;
 
   max-width: 1170px;
+  padding-top: 99px;
 }
 
 .services__title {
@@ -59,6 +60,10 @@
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $tablet-width) {
+  .services {
+    padding-top: 66px;
+  }
+
   .services__title {
     @include h2-tablet;
     @include wrapper;
@@ -101,5 +106,32 @@
 
   .services__text-tablet {
     display: none;
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $mobile-width) {
+  .services {
+    padding-top: 35px;
+  }
+
+  .services__title {
+    max-width: 320px;
+
+    font-size: 20px;
+  }
+
+  .services__link {
+    min-height: 40px;
+    padding: 0 20px;
+
+    font-size: 12px;
+
+    background-color: white;
+
+    &--last {
+      padding-right: 90px;
+    }
   }
 }
