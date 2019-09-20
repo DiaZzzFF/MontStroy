@@ -75,6 +75,7 @@
 
     min-width: 250px;
     min-height: 175px;
+    max-height: 200px;
   }
 
   .advantages__box {
@@ -100,22 +101,22 @@
 
   .advantages__toggles {
     position: relative;
-    top: -22px;
+    top: -13px;
 
-    max-width: 6.7%;
+    max-width: 6.69%;
     min-height: 8px;
     margin: 0 auto;
   }
 
   .advantages .swiper-slide-active {
-    min-width: 280px;
-    min-height: 200px;
+    min-width: 284px;
+    min-height: 203px;
   }
 
   .swiper-slide-active .advantages__box {
     padding: 0 30px;
     padding-top: 49px;
-    padding-bottom: 42px;
+    padding-bottom: 35px;
 
     box-shadow: 0 10px 20px 10px rgba(black, 0.05);
   }
@@ -140,7 +141,7 @@
 
 @media (max-width: $mobile-width) {
   .advantages__wrapper {
-    max-width: 280px;
+    max-width: 284px;
     min-height: 230px;
   }
 
