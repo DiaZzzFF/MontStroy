@@ -33,8 +33,22 @@
     $('.services').animatescroll();
   });
 
+  $('.grayscale').gray();
+
   var currentBreakpoint = '';
   var swiperAdvantages;
+  var swiperPartners;
+
+  var desktopSwiperConfigPartners = {
+    init: false,
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.partners__btn-next',
+      prevEl: '.partners__btn-prev',
+    },
+  };
 
   var tabletSwiperConfigAdvantages = {
     init: false,
@@ -46,6 +60,26 @@
     loop: true,
     pagination: {
       el: '.advantages__toggles',
+      clickable: true,
+    },
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    }
+  };
+
+  var tabletSwiperConfigPartners = {
+    init: false,
+    slidesPerView: 3,
+    spaceBetween: 0,
+    centeredSlides: true,
+    effect: 'coverflow',
+    loop: true,
+    pagination: {
+      el: '.partners__toggles',
       clickable: true,
     },
     coverflowEffect: {
@@ -69,6 +103,17 @@
     },
   };
 
+  var mobileSwiperConfigPartners = {
+    init: false,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    pagination: {
+      el: '.partners__toggles',
+      clickable: true,
+    },
+  };
+
   function initSwiper() {
     if (window.matchMedia('(max-width: 767px)').matches && currentBreakpoint !== 'mobile') {
       currentBreakpoint = 'mobile';
@@ -78,6 +123,12 @@
       }
       swiperAdvantages = new Swiper('.swiper-container-advantages', mobileSwiperConfigAdvantages);
       swiperAdvantages.init();
+
+      if (swiperPartners) {
+        swiperPartners.destroy();
+      }
+      swiperPartners = new Swiper('.swiper-container', mobileSwiperConfigPartners);
+      swiperPartners.init();
     }
 
     if (window.matchMedia('(min-width: 768px) and (max-width: 1199px)').matches && currentBreakpoint !== 'tablet') {
@@ -88,6 +139,12 @@
       }
       swiperAdvantages = new Swiper('.swiper-container-advantages', tabletSwiperConfigAdvantages);
       swiperAdvantages.init();
+
+      if (swiperPartners) {
+        swiperPartners.destroy();
+      }
+      swiperPartners = new Swiper('.swiper-container', tabletSwiperConfigPartners);
+      swiperPartners.init();
     }
 
     if (window.matchMedia('(min-width: 1200px)').matches && currentBreakpoint !== 'desktop') {
@@ -96,6 +153,12 @@
       if (swiperAdvantages) {
         swiperAdvantages.destroy();
       }
+
+      if (swiperPartners) {
+        swiperPartners.destroy();
+      }
+      swiperPartners = new Swiper('.swiper-container', desktopSwiperConfigPartners);
+      swiperPartners.init();
     }
   }
 

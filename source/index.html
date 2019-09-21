@@ -654,7 +654,71 @@
             </a>
           </li>
         </ul>
+      </section>
 
+      <section class="partners">
+        <div class="partners__wrapper swiper-container-partners">
+          <h2 class="partners__title">
+            <span class="partners__title-tablet">Наши</span> партнеры
+          </h2>
+
+          <div class="partners__arrows">
+            <button class="partners__btn partners__btn-prev" type="button" aria-label="Назад">
+              <svg class="partners__btn-svg partners__btn-svg--prev" width="16" height="6"><use xlink:href="#icon-arrow"></use></svg>
+            </button>
+
+            <button class="partners__btn partners__btn-next" type="button" aria-label="Вперед">
+              <svg class="partners__btn-svg partners__btn-svg--next" width="16" height="6"><use xlink:href="#icon-arrow"></use></svg>
+            </button>
+          </div>
+
+          <div class="partners__wrapper-2 swiper-container">
+            <ul class="partners__list swiper-wrapper">
+              <li class="partners__item swiper-slide">
+                <a class="partners__link" href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/partners-аva-company.webp 1x, img/partners-аva-company@2x.webp 2x">
+
+                    <img class="partners__img partners__img--аva-company grayscale grayscale-fade" src="img/partners-аva-company.png" srcset="img/partners-аva-company@2x.png 2x" alt="Ava Company">
+                  </picture>
+                </a>
+              </li>
+              <li class="partners__item swiper-slide">
+                <a class="partners__link" href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/partners-mirror.webp 1x, img/partners-mirror@2x.webp 2x">
+
+                    <img class="partners__img partners__img--mirror grayscale grayscale-fade" src="img/partners-mirror.png" srcset="img/partners-mirror@2x.png 2x" alt="Mirror Business Center">
+                  </picture>
+                </a>
+              </li>
+              <li class="partners__item swiper-slide">
+                <a class="partners__link" href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/partners-shield.webp 1x, img/partners-shield@2x.webp 2x">
+
+                    <img class="partners__img partners__img--shield grayscale grayscale-fade" src="img/partners-shield.png" srcset="img/partners-shield@2x.png 2x" alt="Shield - охранное предприятие">
+                  </picture>
+                </a>
+              </li>
+              <li class="partners__item swiper-slide">
+                <a class="partners__link" href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/partners-ntf.webp 1x, img/partners-ntf@2x.webp 2x">
+
+                    <img class="partners__img partners__img--ntf grayscale grayscale-fade" src="img/partners-ntf.png" srcset="img/partners-ntf@2x.png 2x" alt="ЗАО НТФ Телподомэнерг">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="partners__toggles toggles toggles--hidden">
+            <button class="toggles__item" type="button" aria-label="Первый слайд"></button>
+            <button class="toggles__item" type="button" aria-label="Второй слайд"></button>
+            <button class="toggles__item" type="button" aria-label="Третий слайд"></button>
+            <button class="toggles__item" type="button" aria-label="Четвертый слайд"></button>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -667,6 +731,7 @@
     <script src="js/picturefill.min.js"></script>
     <script src="js/animatescroll.min.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.gray.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
