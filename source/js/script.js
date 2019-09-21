@@ -47,7 +47,7 @@
     navigation: {
       nextEl: '.partners__btn-next',
       prevEl: '.partners__btn-prev',
-    },
+    }
   };
 
   var tabletSwiperConfigAdvantages = {
@@ -74,8 +74,10 @@
   var tabletSwiperConfigPartners = {
     init: false,
     slidesPerView: 3,
-    spaceBetween: 0,
+    spaceBetween: 10,
+    initialSlide: 1,
     centeredSlides: true,
+    width: 820,
     effect: 'coverflow',
     loop: true,
     pagination: {
