@@ -110,6 +110,7 @@
     slidesPerView: 1,
     spaceBetween: 0,
     loop: true,
+    width: 280,
     pagination: {
       el: '.partners__toggles',
       clickable: true,
