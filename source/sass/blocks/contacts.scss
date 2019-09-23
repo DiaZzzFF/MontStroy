@@ -1,0 +1,60 @@
+.contacts {
+  @include outline;
+
+  width: 220px;
+
+  font-size: 16px;
+  line-height: 26px;
+
+  background-color: indigo;
+}
+
+.contacts,
+.contacts__email-text,
+.contacts__tel-text {
+  color: white;
+}
+
+.contacts__address-box,
+.contacts__email,
+.contacts__tel {
+  display: flex;
+}
+
+.contacts__address-box {
+  margin-bottom: 46px;
+}
+
+.contacts__email {
+  margin-bottom: 36px;
+}
+
+.contacts__svg-box {
+  margin-left: 2px;
+  margin-right: 15px;
+
+  &--geolocation {
+    margin-top: 1px;
+  }
+}
+
+.contacts__svg {
+  fill: #36a79b;
+
+  &--geolocation {
+    fill: #41cdb7;
+  }
+}
+
+.contacts__address,
+.contacts__time {
+  margin: 0;
+}
+
+.contacts__time {
+  margin-left: 30px;
+
+  font-size: 13px;
+  line-height: 13px;
+  color: rgba($color: white, $alpha: 0.6);
+}

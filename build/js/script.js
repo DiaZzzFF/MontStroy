@@ -35,6 +35,16 @@
 
   $('.grayscale').gray();
 
+  $(document).ready(function () {
+    $('[type=tel]').mask('+7 (000) 000-00-00');
+
+    $('[type=email]').mask("A", {
+      translation: {
+        "A": { pattern: /[\w@\-.+]/, recursive: true }
+      }
+    });
+  });
+
   var currentBreakpoint = '';
   var swiperAdvantages;
   var swiperPartners;
