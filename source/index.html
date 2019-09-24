@@ -727,7 +727,9 @@
     <footer class="footer">
       <h2 class="footer__title">Контакты</h2>
 
-      <section class="footer__map"></section>
+      <section class="footer__map">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1deb453dbc8cbb4e3a38fe7df3a40c3c432b276163827a14221f8f47fffaa89b&amp;source=constructor" width="100%" height="807" frameborder="0"></iframe>
+      </section>
 
       <div class="footer__box">
         <div class="footer__wrapper">
@@ -782,12 +784,12 @@
 
               <div class="feedback__item feedback__item--email">
                 <label class="feedback__label" for="customer-email">E-mail</label>
-                <input class="feedback__input" type="email" name="email" id="customer-email" required>
+                <input class="feedback__input feedback__input--email" type="email" name="email" id="customer-email" required>
               </div>
 
               <div class="feedback__item feedback__item--message">
                 <label class="feedback__label" for="customer-message">Сообщение</label>
-                <input class="feedback__input" type="text" name="message" id="customer-message" required>
+                <input class="feedback__input feedback__input--text" type="text" name="message" id="customer-message" required>
               </div>
 
               <div class="feedback__info">
@@ -799,7 +801,7 @@
                 </a>
               </div>
 
-              <button class="consultation__btn" type="submit">Отправить</button>
+              <button class="feedback__btn" type="submit">Отправить</button>
             </form>
           </section>
 
@@ -827,13 +829,13 @@
                 <li class="social__item">
                   <a class="social__link social__link--vk" href="#" aria-label="Следите за нами в VK">
                     <span class="visually-hidden">VK</span>
-                    <svg class="social__link-svg" width="35" height="21"><use xlink:href="#icon-vk"></use></svg>
+                    <svg class="social__link-svg social__link-svg--vk" width="35" height="35"><use xlink:href="#icon-vk"></use></svg>
                   </a>
                 </li>
                 <li class="social__item">
                   <a class="social__link social__link--tw" href="#" aria-label="Следите за нами в Twitter">
                     <span class="visually-hidden">Twitter</span>
-                    <svg class="social__link-svg" width="27" height="22"><use xlink:href="#icon-tw"></use></svg>
+                    <svg class="social__link-svg" width="27" height="27"><use xlink:href="#icon-tw"></use></svg>
                   </a>
                 </li>
                 <li class="social__item">

@@ -11,7 +11,15 @@
   width: 100%;
   height: 807px;
 
-  background-color: gold;
+  background-color: #ededed;
+  background-image: url("../img/bg-map-desktop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-map-desktop@2x.png");
+    background-size: 1920px auto;
+  }
 }
 
 .footer__box {
@@ -33,34 +41,52 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  max-width: 1170px;
+  max-width: 1180px;
   min-height: 466px;
   padding-top: 57px;
+  padding-left: 5px;
 
   background-color: black;
 }
 
 .footer__feedback {
   position: absolute;
-  top: -184px;
+  top: -186px;
   left: 25%;
 
   width: 580px;
   height: 580px;
+  padding-top: 43px;
+  padding-bottom: 38px;
 
-  background-color: floralwhite;
+  background-color: white;
+
+  overflow: auto;
 }
 
 .footer__menu-social {
   @include outline;
 
-  width: 200px; // временно
-  height: 300px; // временно
+  width: 190px;
+  padding-top: 7px;
+}
 
-  background-color: indigo;
+.footer__logo,
+.footer__logo-img {
+  min-width: 141px;
+  max-width: 141px;
+  height: 60px;
+}
+
+.footer__logo {
+  display: block;
+
+  margin-bottom: 47px;
 }
 
 .footer__company {
+  margin-bottom: 45px;
+
   font-size: 16px;
   line-height: 38px;
 
@@ -78,7 +104,7 @@
   margin: 0;
 
   font-size: 10px;
-  line-height: 25px;
+  line-height: 24px;
   letter-spacing: 0.4px;
   color: rgba($color: white, $alpha: 0.25);
   text-align: center;

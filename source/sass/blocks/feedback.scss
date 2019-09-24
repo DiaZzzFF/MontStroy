@@ -1,0 +1,110 @@
+.feedback__headline {
+  @include h2-line;
+
+  display: block;
+
+  margin-bottom: 29px;
+
+  font-size: 25px;
+  text-align: center;
+
+  &::after {
+    width: 0;
+  }
+}
+
+.feedback__form {
+  padding: 0 106px 0 74px;
+}
+
+.feedback__line {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 23px;
+}
+
+.feedback__item {
+  display: flex;
+  flex-direction: column;
+
+  &--email {
+    margin-bottom: 32px;
+  }
+
+  &--message {
+    margin-bottom: 25px;
+  }
+}
+
+.feedback__label {
+  font-size: 20px;
+  line-height: 50px;
+  letter-spacing: 0.4px;
+}
+
+.feedback__input {
+  width: 178px;
+
+  border: none;
+  border-bottom: 1px solid rgba($color: black, $alpha: 0.2);
+
+  &--email,
+  &--text {
+    width: 100%;
+  }
+}
+
+.feedback__info,
+.feedback__info-link {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba($color: black, $alpha: 0.5);
+  text-align: center;
+}
+
+.feedback__info {
+  margin-bottom: 37px;
+}
+
+.feedback__info-text {
+  margin: 0;
+}
+
+.feedback__info-link {
+  border-bottom: 1.5px dotted rgba($color: black, $alpha: 0.5);
+
+  &:hover {
+    color: black;
+    border-color: black;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.feedback__btn {
+  @include wrapper;
+
+  display: block;
+
+  width: 230px;
+  height: 60px;
+
+  font-size: 25px;
+  line-height: 50px;
+  font-weight: 700;
+  font-family: "Raleway", "Arial", sans-serif;
+  letter-spacing: 0.4px;
+  color: white;
+
+  background-color: black;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+
+    box-shadow: 0 3px 0 0 rgba(black, 0.3);
+  }
+}
