@@ -1,0 +1,29 @@
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $tablet-width) {
+  .f-menu__list {
+    @include ul-style;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    min-width: 360px;
+  }
+
+  .f-menu__item {
+    @include outline;
+
+    padding: 0 20px;
+  }
+
+  .f-menu__link {
+    display: block;
+
+    max-width: 70px;
+    line-height: 25px;
+
+    font-size: 12px;
+    color: rgba($color: #fffffe, $alpha: 0.5);
+  }
+}
+

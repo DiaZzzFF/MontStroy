@@ -1,5 +1,6 @@
 .social__list {
   @include ul-style;
+  @include outline;
 
   display: flex;
   flex-wrap: wrap;
@@ -40,5 +41,60 @@
   &--vk {
     position: relative;
     top: -3px;
+
+    width: 35px;
+    height: 35px;
+  }
+
+  &--tw {
+    width: 27px;
+    height: 27px;
+  }
+
+  &--fb {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $tablet-width) {
+  .social {
+    margin-left: auto;
+  }
+
+  .social__list {
+    width: 95px;
+    height: 17px;
+  }
+
+  .social__item {
+    margin-right: 17px;
+
+    &:nth-of-type(2n) {
+      margin-right: 17px;
+    }
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .social__link-svg {
+    &--vk {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--tw {
+      width: 17px;
+      height: 17px;
+    }
+
+    &--fb {
+      width: 17px;
+      height: 17px;
+    }
   }
 }
