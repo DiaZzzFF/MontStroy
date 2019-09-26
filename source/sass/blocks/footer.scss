@@ -138,7 +138,7 @@
 
   .footer__wrapper {
     flex-direction: column;
-    //justify-content: flex-start;
+    justify-content: flex-start;
 
     min-height: 402px;
     padding: 25px 65px 0;
@@ -154,13 +154,13 @@
 
     width: 413px;
     height: 413px;
-    //padding-top: 43px;
-    //padding-bottom: 38px;
+    padding-top: 31px;
+    padding-bottom: 29px;
   }
 
   .footer__menu-social {
     @include wrapper;
-    //@include outline;
+    @include outline;
 
     display: flex;
     justify-content: space-between;
@@ -168,14 +168,10 @@
 
     width: 100%;
     max-width: 100%;
-    //min-height: 81px;
     padding-top: 0;
     padding-bottom: 23px;
 
-    //border-bottom: 1px solid rgba(white, 0.1);
-    border-bottom: 1px solid white;
-  
-    //overflow: auto;
+    border-bottom: 1px solid rgba(white, 0.1);
   }
 
   .footer__logo {
