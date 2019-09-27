@@ -1,7 +1,3 @@
-@mixin outline {
-  outline: 1px solid red;
-}
-
 @mixin wrapper {
   margin: 0 auto;
 }
@@ -57,5 +53,15 @@
 
   &::after {
     width: 0;
+  }
+}
+
+@mixin link-hover-active {
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }

@@ -20,8 +20,6 @@
     <script src="js/jquery-3.4.1.min.js"></script>
   </head>
   <body>
-  <!-- <<<<<<<<<<<<<<< sprite >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-
     <div style="display:none;">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-down" viewbox="0 0 8 5">
   <path d="M292,1357h8l-4,5Z" transform="translate(-292 -1357)"></path>
@@ -73,8 +71,6 @@
     c2.264-0.148,3.438-2.924,2.138-5.451C94.969,68.279,93.771,66.703,92.499,65.178z"></path>
 </symbol></svg>
     </div>
-
-  <!-- <<<<<<<<<<<<<<< header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
     <header class="header">
       <div class="header__wrapper">
@@ -129,8 +125,6 @@
         </button>
       </div>
     </header>
-
-  <!-- <<<<<<<<<<<<<<< main >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
     <main class="main">
       <section class="promo">
@@ -770,8 +764,6 @@
       </section>
     </main>
 
-  <!-- <<<<<<<<<<<<<<< footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-
     <footer class="footer">
       <h2 class="footer__title">Контакты</h2>
 
@@ -893,6 +885,37 @@
               </ul>
             </section>
 
+            <section class="footer__contacts-2 contacts contacts--copy">
+              <div class="contacts__address-box contacts__address-box--copy">
+                <div class="contacts__svg-box contacts__svg-box--geolocation contacts__svg-box--copy">
+                  <svg class="contacts__svg contacts__svg--geolocation contacts__svg--copy" width="12" height="15"><use xlink:href="#icon-geolocation"></use></svg>
+                </div>
+
+                <p class="contacts__address contacts__address--copy">
+                  Варшавское шоссе,
+                  д,&nbsp;118, к.1 Бизнес-центр
+                  «ВАРШАВКА Sky»
+                </p>
+              </div>
+
+              <a class="contacts__email contacts__email--copy" href="mailto:zao@montstroy.ru" aria-label="Написать на почту">
+                <div class="contacts__svg-box contacts__svg-box--copy">
+                  <svg class="contacts__svg contacts__svg--copy" width="16" height="11"><use xlink:href="#icon-letter"></use></svg>
+                </div>
+
+                <span class="contacts__email-text contacts__email-text--copy">zao@montstroy.ru</span>
+              </a>
+
+              <a class="contacts__tel contacts__tel--copy" href="tel:+74954526723" aria-label="Позвоните нам">
+                <div class="contacts__svg-box contacts__svg-box--copy">
+                  <svg class="contacts__svg contacts__svg--copy" width="13" height="12"><use xlink:href="#icon-phone"></use></svg>
+                </div>
+
+                <span class="contacts__tel-text contacts__tel-text--copy">+7 (495) 452-67-23</span>
+              </a>
+              <p class="contacts__time contacts__time--copy">Ежедневно с 9:00 до 18:00</p>
+            </section>
+
             <section class="footer__social social">
               <h3 class="visually-hidden">Социальные сети</h3>
 
@@ -921,7 +944,7 @@
         </div>
 
         <p class="footer__copyright">
-          1992-2018 &copy; ЗАО “НСП ”МонтСтрой”. Все права защищены
+          1992-2018 &copy; ЗАО “НСП ”МонтСтрой”<span class="footer__copyright-span">.</span> Все права защищены
         </p>
       </div>
     </footer>
@@ -931,6 +954,6 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery.gray.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
-    <script src="js/script.j"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

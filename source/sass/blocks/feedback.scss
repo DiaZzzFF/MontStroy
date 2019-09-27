@@ -1,3 +1,18 @@
+.feedback {
+  position: absolute;
+  top: -186px;
+  left: 25%;
+
+  width: 580px;
+  height: 580px;
+  padding-top: 43px;
+  padding-bottom: 38px;
+
+  background-color: white;
+
+  overflow: auto;
+}
+
 .feedback__headline {
   @include h2-line;
 
@@ -102,16 +117,32 @@
   background-color: black;
   border: none;
 
+  overflow: auto;
+
   &:hover {
     cursor: pointer;
 
     box-shadow: 0 3px 0 0 rgba(black, 0.3);
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $tablet-width) {
+  .feedback {
+    top: -116px;
+    left: 65px;
+
+    width: 413px;
+    height: 413px;
+    padding-top: 31px;
+    padding-bottom: 29px;
+  }
+
   .feedback__headline {
     margin-bottom: 21px;
 
@@ -171,5 +202,57 @@
 
     font-size: 16px;
     line-height: 35.6px;
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $mobile-width) {
+  .feedback {
+    position: static;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 457px;
+    padding-top: 40px;
+  }
+
+  .feedback__headline {
+    margin-bottom: 13px;
+  }
+
+  .feedback__form {
+    @include wrapper;
+
+    width: 280px;
+    padding: 0;
+  }
+
+  .feedback__line {
+    margin-bottom: 12px;
+  }
+
+  .feedback__item {
+    &--email {
+      margin-bottom: 18px;
+    }
+
+    &--message {
+      margin-bottom: 17px;
+    }
+  }
+
+  .feedback__input {
+    width: 117px;
+
+    &--email,
+    &--text {
+      width: 100%;
+    }
+  }
+
+  .feedback__info {
+    margin-bottom: 33px;
   }
 }

@@ -51,21 +51,6 @@
   background-color: black;
 }
 
-.footer__feedback {
-  position: absolute;
-  top: -186px;
-  left: 25%;
-
-  width: 580px;
-  height: 580px;
-  padding-top: 43px;
-  padding-bottom: 38px;
-
-  background-color: white;
-
-  overflow: auto;
-}
-
 .footer__menu-social {
   max-width: 190px;
   padding-top: 7px;
@@ -79,24 +64,20 @@
 }
 
 .footer__logo {
+  @include link-hover-active;
+
   display: block;
 
   margin-bottom: 47px;
 }
 
 .footer__company {
-  @include outline;
-
   margin-bottom: 45px;
 
   font-size: 16px;
   line-height: 38px;
 
   color: rgba($color: #fffffe, $alpha: 0.9);
-}
-
-.footer__menu {
-  display: none;
 }
 
 .footer__copyright {
@@ -114,7 +95,6 @@
 
 @media (max-width: $tablet-width) {
   .footer {
-    width: 100%;
     min-height: 814px;
   }
 
@@ -144,23 +124,8 @@
     padding: 25px 65px 0;
   }
 
-  .footer__contacts {
-    margin-left: auto;
-  }
-
-  .footer__feedback {
-    top: -116px;
-    left: 65px;
-
-    width: 413px;
-    height: 413px;
-    padding-top: 31px;
-    padding-bottom: 29px;
-  }
-
   .footer__menu-social {
     @include wrapper;
-    @include outline;
 
     display: flex;
     justify-content: space-between;
@@ -188,17 +153,77 @@
     color: rgba($color: #fffffe, $alpha: 0.5);
   }
 
-  .footer__menu {
-    @include outline;
-    @include wrapper;
-
-    display: block;
-  }
-
   .footer__copyright {
     padding-top: 21px;
 
     line-height: 18px;
     color: rgba($color: white, $alpha: 0.3);
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $mobile-width) {
+  .footer__title {
+    @include h2-line;
+    @include wrapper;
+
+    display: block;
+
+    width: 280px;
+
+    font-size: 20px;
+
+    &::after {
+      width: 0;
+    }
+  }
+
+  .footer__map,
+  .footer__map-iframe {
+    height: 196px;
+  }
+
+  .footer__map {
+    background-image: url("../img/bg-map-mobile.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-mobile@2x.png");
+      background-size: 320px auto;
+    }
+  }
+
+  .footer__wrapper {
+    padding: 0;
+  }
+
+  .footer__menu-social {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding-bottom: 48px;
+
+    background-color: #1a1a1a;
+    border-bottom: none;
+  }
+
+  .footer__company {
+    display: none;
+  }
+
+  .footer__copyright {
+    @include wrapper;
+
+    width: 185px;
+    min-height: 54px;
+    padding-top: 13px;
+
+    line-height: 14px;
+    color: rgba($color: white, $alpha: 0.33);
+  }
+
+  .footer__copyright-span {
+    display: none;
   }
 }

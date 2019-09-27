@@ -22,11 +22,11 @@
   });
 
   myBtnHeaderFeedback.addEventListener('click', function () {
-    $('.footer').animatescroll(); // временно
+    $('.feedback__form').animatescroll();
   });
 
   myBtnPromoFeedback.addEventListener('click', function () {
-    $('.footer').animatescroll(); // временно
+    $('.feedback__form').animatescroll();
   });
 
   myBtnPromoServices.addEventListener('click', function () {
@@ -179,5 +179,3 @@
 
   window.addEventListener('resize', initSwiper);
 })();
-
-

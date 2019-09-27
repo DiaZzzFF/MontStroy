@@ -1,10 +1,12 @@
 .contacts {
-  @include outline;
-
-  width: 210px;
+  max-width: 210px;
 
   font-size: 16px;
   line-height: 26px;
+
+  &--copy {
+    display: none;
+  }
 }
 
 .contacts,
@@ -21,6 +23,16 @@
 
 .contacts__address-box {
   margin-bottom: 46px;
+}
+
+.contacts__email,
+.contacts__tel {
+  @include link-hover-active;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $aqua;
+  }
 }
 
 .contacts__email {
@@ -44,6 +56,11 @@
   }
 }
 
+.contacts__email-text,
+.contacts__tel-text {
+  font-weight: 700;
+}
+
 .contacts__address,
 .contacts__time {
   margin: 0;
@@ -61,11 +78,83 @@
 
 @media (max-width: $tablet-width) {
   .contacts {
-    @include outline;
-
-    width: 200px;
+    max-width: 200px;
     min-height: 315px;
+    margin-left: auto;
 
     font-size: 14px;
+  }
+
+  .contacts__time {
+    font-size: 12px;
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $mobile-width) {
+  .contacts {
+    @include wrapper;
+
+    width: 100%;
+    min-height: 179px;
+    padding-top: 19px;
+
+    &--copy {
+      display: block;
+
+      max-width: 280px;
+      min-height: 235px;
+      padding-top: 15px;
+    }
+  }
+
+  .contacts,
+  .contacts__email-text,
+  .contacts__tel-text {
+    &--copy {
+      color: rgba($color: white, $alpha: 0.5);
+    }
+  }
+
+  .contacts__address-box {
+    margin-bottom: 10px;
+
+    &--copy {
+      margin-bottom: 17px;
+    }
+  }
+
+  .contacts__address {
+    line-height: 19px;
+
+    &--copy {
+      width: 170px;
+
+      line-height: 28px;
+    }
+  }
+
+  .contacts__email {
+    margin-bottom: 7px;
+
+    &--copy {
+      margin-bottom: 19px;
+    }
+  }
+
+  .contacts__svg {
+    &--copy {
+      fill: rgba($color: white, $alpha: 0.5);
+    }
+  }
+
+  .contacts__email-text,
+  .contacts__tel-text {
+    font-weight: 400;
+
+    &--copy {
+      font-weight: 700;
+    }
   }
 }
