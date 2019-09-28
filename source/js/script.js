@@ -45,6 +45,21 @@
     });
   });
 
+  var myProjectsLinks = myBody.querySelectorAll('.projects__item-link');
+
+  var addAndRemoveHref = function () {
+    if (window.matchMedia('(max-width: 1199px)').matches) {
+      for (var i = 0; i < myProjectsLinks.length; i++) {
+        myProjectsLinks[i].setAttribute('href', '#');
+      }
+
+    } else {
+      for (var j = 0; j < myProjectsLinks.length; j++) {
+        myProjectsLinks[j].removeAttribute('href');
+      }
+    }
+  };
+
   var currentBreakpoint = '';
   var swiperAdvantages;
   var swiperPartners;
@@ -175,7 +190,10 @@
     }
   }
 
+
+  addAndRemoveHref();
   initSwiper();
 
   window.addEventListener('resize', initSwiper);
+  window.addEventListener('resize', addAndRemoveHref);
 })();

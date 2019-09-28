@@ -148,6 +148,12 @@
     }
   }
 
+  .projects__item-link {
+    @include link-hover-active;
+
+    display: block;
+  }
+
   .projects__box {
     padding: 45px 100px 30px 44px;
 
