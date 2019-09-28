@@ -21,12 +21,12 @@
 }
 
 .promo__heading {
+  @include font-raleway-black;
+
   margin: 0;
   margin-bottom: 23px;
 
   font-size: 72px;
-  font-weight: 900;
-  font-family: "Raleway", "Arial", sans-serif;
   color: #fffffe;
   text-transform: uppercase;
   letter-spacing: 3.6px;

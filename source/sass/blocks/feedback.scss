@@ -101,6 +101,7 @@
 
 .feedback__btn {
   @include wrapper;
+  @include font-raleway-bold;
 
   display: block;
 
@@ -109,8 +110,6 @@
 
   font-size: 25px;
   line-height: 50px;
-  font-weight: 700;
-  font-family: "Raleway", "Arial", sans-serif;
   letter-spacing: 0.4px;
   color: white;
 

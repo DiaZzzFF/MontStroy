@@ -65,3 +65,19 @@
     opacity: 0.5;
   }
 }
+
+@mixin font-raleway-bold {
+  font-weight: 700;
+  font-family: "Raleway", "Arial", sans-serif;
+}
+
+@mixin font-raleway-black {
+  font-weight: 900;
+  font-family: "Raleway", "Arial", sans-serif;
+}
+
+@mixin font-circe-regular {
+  font-weight: 400;
+  font-family: "Circe", "Arial", sans-serif;
+}
+
