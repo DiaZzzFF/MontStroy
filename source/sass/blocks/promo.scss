@@ -5,7 +5,7 @@
   background-color: black;
   background-image: url("../img/bg-banner-desktop.jpg");
   background-repeat: no-repeat;
-  background-position: center -100px;
+  background-position: right -100px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-banner-desktop@2x.jpg");
