@@ -110,6 +110,8 @@
   border: 1px solid #ededed;
 
   &:hover .partners__img {
+    filter: grayscale(0);
+
     opacity: 1;
   }
 
@@ -119,6 +121,9 @@
 }
 
 .partners__img {
+  filter: grayscale(100%);
+  transition: filter 1s;
+
   opacity: 0.5;
   object-fit: cover;
 

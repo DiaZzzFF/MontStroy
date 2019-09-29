@@ -30,9 +30,7 @@
     });
   };
 
-  $('.grayscale').gray();
-
-  $(document).ready(function () {
+  /* $(document).ready(function () {
     $('[type=tel]').mask('+7 (000) 000-00-00');
 
     $('[type=email]').mask("A", {
@@ -40,7 +38,7 @@
         "A": { pattern: /[\w@\-.+]/, recursive: true }
       }
     });
-  });
+  });*/
 
   var myProjectsLinks = myBody.querySelectorAll('.projects__item-link');
 
