@@ -21,17 +21,14 @@
     }
   });
 
-  myBtnHeaderFeedback.addEventListener('click', function () {
-    $('.feedback__form').animatescroll();
-  });
-
-  myBtnPromoFeedback.addEventListener('click', function () {
-    $('.feedback__form').animatescroll();
-  });
-
-  myBtnPromoServices.addEventListener('click', function () {
-    $('.services').animatescroll();
-  });
+  var scroll = function (myBtn, scrollTo) {
+    myBtn.addEventListener('click', function () {
+      myBody.querySelector(scrollTo).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  };
 
   $('.grayscale').gray();
 
@@ -190,6 +187,9 @@
     }
   }
 
+  scroll(myBtnHeaderFeedback, '.feedback__form');
+  scroll(myBtnPromoFeedback, '.feedback__form');
+  scroll(myBtnPromoServices, '.services');
 
   addAndRemoveHref();
   initSwiper();

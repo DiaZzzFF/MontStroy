@@ -16,8 +16,6 @@
     <link rel="preload" href="fonts/circe-regular.woff2" as="font">
 
     <link rel="stylesheet" href="css/style.min.css">
-
-    <script src="js/jquery-3.4.1.min.js"></script>
   </head>
   <body>
     <div style="display:none;">
@@ -120,7 +118,7 @@
           +7 (495) 452-67-23
         </a>
 
-        <button class="header__btn-feedback" type="button" aria-label="Прокрутить к форме обратной связи">
+        <button class="header__btn-feedback scroll-to" type="button" aria-label="Прокрутить к форме обратной связи">
           Обратная связь
         </button>
       </div>
@@ -151,8 +149,8 @@
               </div>
 
               <div class="promo__swap-item">
-                <button class="promo__btn promo__btn--services" type="button" aria-label="Прокрутить к разделу Услуги">Наши услуги</button>
-                <button class="promo__btn promo__btn--feedback" type="button" aria-label="Прокрутить к форме обратной связи">Связаться с нами</button>
+                <button class="promo__btn promo__btn--services scroll-to" type="button" aria-label="Прокрутить к разделу Услуги">Наши услуги</button>
+                <button class="promo__btn promo__btn--feedback scroll-to" type="button" aria-label="Прокрутить к форме обратной связи">Связаться с нами</button>
               </div>
             </div>
 
@@ -643,7 +641,7 @@
                   <source media="(max-width: 1199px)" srcset="img/shopping-complex-tablet.jpg 1x, img/shopping-complex-tablet@2x.jpg 2x">
                   <img class="projects__img" src="img/shopping-complex-desktop.jpg" srcset="img/shopping-complex-desktop@2x.jpg 2x" alt="ТК «Medial»">
                 </picture>
-              </div> -->
+              </div>
 
               <a class="projects__link" href="#">
                 <svg class="projects__link-svg" width="16" height="6"><use xlink:href="#icon-arrow"></use></svg>
@@ -962,7 +960,6 @@
     </footer>
 
     <script src="js/picturefill.min.js"></script>
-    <script src="js/animatescroll.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery.gray.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>

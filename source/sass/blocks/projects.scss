@@ -197,12 +197,9 @@
 
   .projects__list {
     flex-direction: column;
-    //align-items: center;
-    //justify-content: flex-start;
   }
 
   .projects__item {
-    //width: 280px;
     height: 100px;
 
     &:nth-of-type(n + 5) .projects__heading {
