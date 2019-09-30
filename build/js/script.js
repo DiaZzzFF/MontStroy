@@ -30,18 +30,14 @@
     });
   };
 
-  /* $(document).ready(function () {
-    $('[type=tel]').mask('+7 (000) 000-00-00');
-
-    $('[type=email]').mask("A", {
-      translation: {
-        "A": { pattern: /[\w@\-.+]/, recursive: true }
-      }
-    });
-  });*/
+  var phoneMask = ['+', '7', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/];
+  var myInput = document.querySelector('[type=tel]');
+  vanillaTextMask.maskInput({
+    inputElement: myInput,
+    mask: phoneMask
+  });
 
   var myProjectsLinks = myBody.querySelectorAll('.projects__item-link');
-
   var addAndRemoveHref = function () {
     if (window.matchMedia('(max-width: 1199px)').matches) {
       for (var i = 0; i < myProjectsLinks.length; i++) {
