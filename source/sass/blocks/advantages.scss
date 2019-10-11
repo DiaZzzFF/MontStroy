@@ -25,6 +25,14 @@
 .advantages__box {
   display: flex;
   flex-direction: column;
+
+  &:hover .advantages__svg {
+    fill: rgba($color: white, $alpha: 1);
+  }
+
+  &:hover .advantages__text {
+    color: rgba($color: white, $alpha: 1);
+  }
 }
 
 .advantages__svg {
@@ -85,6 +93,14 @@
 
     background-color: white;
     box-shadow: 0 10px 25px 2px rgba(black, 0.05);
+
+    &:hover .advantages__svg {
+      fill: #b2b2b2;
+    }
+
+    &:hover .advantages__text {
+      color: rgba(black, 0.7);
+    }
   }
 
   .advantages__svg {
