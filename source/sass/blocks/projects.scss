@@ -1,15 +1,20 @@
 .projects {
   @include wrapper;
 
-  max-width: 1170px;
+  max-width: 1176px;
   min-height: 670px;
   padding-top: 62px;
+  padding-left: 3px;
 }
 
 .projects__title {
   @include h2-line;
 
   margin-bottom: 35px;
+
+  &::after {
+    right: 3px;
+  }
 }
 
 .projects__list {
@@ -17,19 +22,19 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+
+  padding-bottom: 22px;
 }
 
 .projects__item {
   position: relative;
 
   max-width: 100%;
-  height: 290px;
+  min-height: 290px;
+  margin-right: 0.25%;
   margin-bottom: 4px;
 
-  &:last-of-type {
-    margin-bottom: 22px;
-  }
+  background-color: black;
 
   &:nth-of-type(n + 5) .projects__heading {
     margin-bottom: 25px;
@@ -39,24 +44,83 @@
   }
 }
 
-.projects__box {
-  position: absolute;
+.projects__item-link {
+  display: block;
 
   width: 100%;
-  height: 100%;
-  max-height: 100%;
+  min-height: 290px;
   padding: 53px 14px 30px 30px;
 
-  overflow: auto;
+  background-repeat: no-repeat;
+
+  &--small {
+    max-width: 290px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: 290px auto;
+    }
+  }
+
+  &--big {
+    max-width: 583px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: 583px auto;
+    }
+  }
+
+  &--stadium {
+    background-image: url("../img/bg-stadium-desktop.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-stadium-desktop@2x.jpg");
+    }
+  }
+
+  &--business-center {
+    background-image: url("../img/bg-business-center-desktop.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-business-center-desktop@2x.jpg");
+    }
+  }
+
+  &--cinema {
+    background-image: url("../img/bg-cinema-desktop.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-cinema-desktop@2x.jpg");
+    }
+  }
+
+  &--shopping-complex {
+    background-image: url("../img/bg-shopping-complex-desktop.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-shopping-complex-desktop@2x.jpg");
+    }
+  }
 
   &--ojsc {
     padding-top: 41px;
     padding-right: 95px;
+
+    background-image: url("../img/bg-ojsc-desktop.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-ojsc-desktop@2x.jpg");
+    }
   }
 
   &--theater {
     padding-top: 41px;
     padding-right: 85px;
+
+    background-image: url("../img/bg-theater-desktop.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-theater-desktop@2x.jpg");
+    }
   }
 }
 
@@ -77,14 +141,10 @@
 }
 
 .projects__text {
-  max-height: 135px;
-
   font-size: 15px;
   line-height: 22px;
 
   color: rgba($color: white, $alpha: 0.6);
-
-  overflow: auto;
 }
 
 .projects__link {
@@ -137,7 +197,7 @@
   }
 
   .projects__item {
-    height: 180px;
+    min-height: 180px;
     margin-bottom: 10px;
 
     &:nth-of-type(n + 5) .projects__heading {
@@ -151,14 +211,67 @@
   .projects__item-link {
     @include link-hover-active;
 
-    display: block;
-  }
-
-  .projects__box {
+    min-height: 180px;
     padding: 45px 100px 30px 44px;
+
+    &--small,
+    &--big {
+      max-width: 100%;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-size: 100% auto;
+      }
+    }
+
+    &--stadium {
+      background-image: url("../img/bg-stadium-tablet.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-stadium-tablet@2x.jpg");
+      }
+    }
+
+    &--business-center {
+      background-image: url("../img/bg-business-center-tablet.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-business-center-tablet@2x.jpg");
+      }
+    }
+
+    &--cinema {
+      background-image: url("../img/bg-cinema-tablet.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-cinema-tablet@2x.jpg");
+      }
+    }
+
+    &--shopping-complex {
+      background-image: url("../img/bg-shopping-complex-tablet.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-shopping-complex-tablet@2x.jpg");
+      }
+    }
+
+    &--ojsc {
+
+      background-image: url("../img/bg-ojsc-tablet.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-ojsc-tablet@2x.jpg");
+      }
+    }
 
     &--theater {
       padding-right: 60px;
+
+      background-image: url("../img/bg-theater-tablet.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-theater-tablet@2x.jpg");
+      }
     }
   }
 
@@ -200,7 +313,7 @@
   }
 
   .projects__item {
-    height: 100px;
+    min-height: 100px;
 
     &:nth-of-type(n + 5) .projects__heading {
       margin-bottom: 0;
@@ -210,14 +323,17 @@
     }
   }
 
-  .projects__box {
+  .projects__item-link {
     display: flex;
     align-items: center;
     justify-content: center;
 
     width: 100%;
+    min-height: 100px;
     height: 100%;
     padding: 0;
+
+    background-size: cover;
   }
 
   .projects__heading {
@@ -238,5 +354,59 @@
   .projects__img {
     width: 100%;
     height: 100px;
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile-projects >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $mobile-width-projects) {
+  .projects__item-link {
+    &--stadium {
+      background-image: url("../img/bg-stadium-mobile.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-stadium-mobile@2x.jpg");
+      }
+    }
+
+    &--business-center {
+      background-image: url("../img/bg-business-center-mobile.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-business-center-mobile@2x.jpg");
+      }
+    }
+
+    &--cinema {
+      background-image: url("../img/bg-cinema-mobile.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-cinema-mobile@2x.jpg");
+      }
+    }
+
+    &--shopping-complex {
+      background-image: url("../img/bg-shopping-complex-mobile.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-shopping-complex-mobile@2x.jpg");
+      }
+    }
+
+    &--ojsc {
+      background-image: url("../img/bg-ojsc-mobile.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-ojsc-mobile@2x.jpg");
+      }
+    }
+
+    &--theater {
+      background-image: url("../img/bg-theater-mobile.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-theater-mobile@2x.jpg");
+      }
+    }
   }
 }

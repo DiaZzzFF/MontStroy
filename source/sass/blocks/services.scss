@@ -14,19 +14,21 @@
 .services__main-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .services__main-item {
-  width: 360px;
-  height: 500px;
+  width: 30.77%;
+  min-height: 500px;
+  margin-right: 3.8%;
   margin-bottom: 43px;
   padding: 43px 49px 30px 43px;
 
   background-color: white;
   box-shadow: 0 5px 9px 1px rgba(black, 0.05);
 
-  overflow: auto;
+  &:nth-of-type(3n) {
+    margin-right: 0;
+  }
 }
 
 .services__list {
