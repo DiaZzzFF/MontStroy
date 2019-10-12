@@ -182,6 +182,16 @@
   fill: rgba($color: white, $alpha: 0.34);
 }
 
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< desktop-help >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $desktop-width-help) {
+  .projects__title {
+    &::after {
+      width: 835px;
+    }
+  }
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $tablet-width) {

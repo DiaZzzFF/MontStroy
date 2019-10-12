@@ -150,7 +150,7 @@
       swiperPartners.init();
     }
 
-    if (window.matchMedia('(min-width: 768px) and (max-width: 1199px)').matches && currentBreakpoint !== 'tablet') {
+    if (window.matchMedia('(min-width: 768px) and (max-width: 1023px)').matches && currentBreakpoint !== 'tablet') {
       currentBreakpoint = 'tablet';
 
       if (swiperAdvantages) {
@@ -166,7 +166,7 @@
       swiperPartners.init();
     }
 
-    if (window.matchMedia('(min-width: 1200px)').matches && currentBreakpoint !== 'desktop') {
+    if (window.matchMedia('(min-width: 1024px)').matches && currentBreakpoint !== 'desktop') {
       currentBreakpoint = 'desktop';
 
       if (swiperAdvantages) {

@@ -129,6 +129,14 @@
   }
 }
 
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< desktop-help >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $desktop-width-help) {
+  .feedback {
+    left: 22%;
+  }
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $tablet-width) {
