@@ -35,6 +35,8 @@
   margin-bottom: 4px;
 
   background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &:nth-of-type(n + 5) .projects__heading {
     margin-bottom: 25px;
@@ -42,22 +44,12 @@
     font-size: 32px;
     line-height: 42px;
   }
-}
-
-.projects__item-link {
-  display: block;
-
-  width: 100%;
-  min-height: 290px;
-  padding: 53px 14px 30px 30px;
-
-  background-repeat: no-repeat;
 
   &--small {
     max-width: 290px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-size: 290px auto;
+      background-size: 290px cover;
     }
   }
 
@@ -65,7 +57,7 @@
     max-width: 583px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-size: 583px auto;
+      background-size: 583px cover;
     }
   }
 
@@ -102,9 +94,6 @@
   }
 
   &--ojsc {
-    padding-top: 41px;
-    padding-right: 95px;
-
     background-image: url("../img/bg-ojsc-desktop.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -113,14 +102,28 @@
   }
 
   &--theater {
-    padding-top: 41px;
-    padding-right: 85px;
-
     background-image: url("../img/bg-theater-desktop.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-theater-desktop@2x.jpg");
     }
+  }
+}
+
+.projects__item-link {
+  display: block;
+
+  width: 100%;
+  padding: 53px 14px 30px 30px;
+
+  &--ojsc {
+    padding-top: 41px;
+    padding-right: 95px;
+  }
+
+  &--theater {
+    padding-top: 41px;
+    padding-right: 85px;
   }
 }
 
@@ -216,13 +219,6 @@
       font-size: 24px;
       line-height: 24px;
     }
-  }
-
-  .projects__item-link {
-    @include link-hover-active;
-
-    min-height: 180px;
-    padding: 45px 100px 30px 44px;
 
     &--small,
     &--big {
@@ -266,7 +262,6 @@
     }
 
     &--ojsc {
-
       background-image: url("../img/bg-ojsc-tablet.jpg");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -275,8 +270,6 @@
     }
 
     &--theater {
-      padding-right: 60px;
-
       background-image: url("../img/bg-theater-tablet.jpg");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -285,14 +278,27 @@
     }
   }
 
-  .projects__heading {
+  .projects__item-link {
+    @include link-hover-active;
+
+    min-height: 100%;
+    padding: 45px 100px 30px 44px;
+
+    &--theater {
+      padding-right: 60px;
+    }
+  }
+
+  .projects__heading,
+  .projects__text {
     min-height: auto;
+  }
+
+  .projects__heading {
     margin-bottom: 15px;
   }
 
   .projects__text {
-    max-height: 80px;
-
     font-size: 18px;
   }
 
@@ -342,8 +348,6 @@
     min-height: 100px;
     height: 100%;
     padding: 0;
-
-    background-size: cover;
   }
 
   .projects__heading {
@@ -370,7 +374,7 @@
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile-projects >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $mobile-width-projects) {
-  .projects__item-link {
+  .projects__item {
     &--stadium {
       background-image: url("../img/bg-stadium-mobile.jpg");
 
