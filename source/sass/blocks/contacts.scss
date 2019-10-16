@@ -40,8 +40,12 @@
 }
 
 .contacts__svg-box {
+  flex-shrink: 0;
+
   margin-left: 2px;
   margin-right: 15px;
+
+  overflow: hidden;
 
   &--geolocation {
     margin-top: 1px;

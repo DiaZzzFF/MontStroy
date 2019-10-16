@@ -15,12 +15,12 @@
 
 .footer__map {
   background-color: #ededed;
-  background-image: url("../img/bg-map-desktop.png");
+  background-image: url("../img/bg-map-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-map-desktop@2x.png");
+    background-image: url("../img/bg-map-desktop@2x.jpg");
     background-size: 1920px auto;
   }
 }
@@ -95,6 +95,14 @@
   text-align: center;
 }
 
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< desktop-help-1024 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $desktop-width-help-1024) {
+  .footer__wrapper {
+    margin: 0 10px;
+  }
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $tablet-width) {
@@ -108,10 +116,10 @@
   }
 
   .footer__map {
-    background-image: url("../img/bg-map-tablet.png");
+    background-image: url("../img/bg-map-tablet.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-map-tablet@2x.png");
+      background-image: url("../img/bg-map-tablet@2x.jpg");
       background-size: 768px auto;
     }
   }
@@ -121,6 +129,8 @@
   }
 
   .footer__wrapper {
+    @include wrapper;
+
     flex-direction: column;
     justify-content: flex-start;
 
@@ -189,10 +199,10 @@
   }
 
   .footer__map {
-    background-image: url("../img/bg-map-mobile.png");
+    background-image: url("../img/bg-map-mobile.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-map-mobile@2x.png");
+      background-image: url("../img/bg-map-mobile@2x.jpg");
       background-size: 320px auto;
     }
   }

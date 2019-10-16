@@ -99,6 +99,14 @@
   display: none;
 }
 
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< desktop-help-1024 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $desktop-width-help-1024) {
+  .promo__wrapper {
+    @include wrapper-1024;
+  }
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $tablet-width) {
@@ -128,6 +136,8 @@
   }
 
   .promo__wrapper {
+    @include wrapper;
+
     padding: 125px 75px 0 83px;
   }
 

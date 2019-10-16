@@ -164,6 +164,7 @@
 
   border: 2px solid rgba($color: white, $alpha: 0.34);
 
+  overflow: hidden;
   cursor: pointer;
 
   &:hover {
@@ -185,12 +186,16 @@
   fill: rgba($color: white, $alpha: 0.34);
 }
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< desktop-help >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< desktop-help-1024 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
-@media (max-width: $desktop-width-help) {
+@media (max-width: $desktop-width-help-1024) {
+  .projects {
+    @include wrapper-1024;
+  }
+
   .projects__title {
     &::after {
-      width: 835px;
+      width: 790px;
     }
   }
 }
@@ -199,6 +204,8 @@
 
 @media (max-width: $tablet-width) {
   .projects {
+    @include wrapper;
+
     max-width: 768px;
     padding: 49px 22px 0;
   }

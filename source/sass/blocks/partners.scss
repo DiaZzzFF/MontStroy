@@ -42,6 +42,8 @@
 
   border: 2px solid #242424;
 
+  overflow: hidden;
+
   &::before {
     content: "";
 
@@ -150,12 +152,16 @@
   max-width: 70px;
 }
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< desktop-help >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< desktop-help-1024 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
-@media (max-width: $desktop-width-help) {
+@media (max-width: $desktop-width-help-1024) {
+  .partners__wrapper {
+    @include wrapper-1024;
+  }
+
   .partners__title {
     &::after {
-      width: 670px;
+      width: 625px;
     }
   }
 }
@@ -164,6 +170,8 @@
 
 @media (max-width: $tablet-width) {
   .partners__wrapper {
+    @include wrapper;
+
     max-width: 768px;
     padding: 62px 22px 41px;
   }

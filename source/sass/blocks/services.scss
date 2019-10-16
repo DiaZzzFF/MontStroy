@@ -63,10 +63,26 @@
   }
 }
 
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< desktop-help-1024 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $desktop-width-help-1024) {
+  .services {
+    @include wrapper-1024;
+  }
+
+  .services__title {
+    &::after {
+      width: 835px;
+    }
+  }
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $tablet-width) {
   .services {
+    @include wrapper;
+
     padding-top: 9px;
   }
 

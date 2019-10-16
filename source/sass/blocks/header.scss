@@ -74,10 +74,20 @@
   }
 }
 
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< desktop-help-1024 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $desktop-width-help-1024) {
+  .header__wrapper {
+    @include wrapper-1024;
+  }
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $tablet-width) {
   .header__wrapper {
+    @include wrapper;
+
     min-height: 52px;
     padding: 8px 54px 0 64px;
   }

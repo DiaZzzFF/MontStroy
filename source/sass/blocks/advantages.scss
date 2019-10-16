@@ -53,10 +53,20 @@
   color: rgba($color: white, $alpha: 0.6);
 }
 
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< desktop-help-1024 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $desktop-width-help-1024) {
+  .advantages__wrapper {
+    @include wrapper-1024;
+  }
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $tablet-width) {
   .advantages__wrapper {
+    @include wrapper;
+
     max-width: 718px;
     min-height: 300px;
     padding-right: 0;

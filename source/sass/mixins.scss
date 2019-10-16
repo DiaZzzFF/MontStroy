@@ -2,6 +2,10 @@
   margin: 0 auto;
 }
 
+@mixin wrapper-1024 {
+  margin: 0 20px;
+}
+
 @mixin ul-style {
   margin: 0;
   padding: 0;

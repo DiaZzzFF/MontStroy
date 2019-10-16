@@ -39,7 +39,7 @@
 
   var myProjectsLinks = myBody.querySelectorAll('.projects__item-link');
   var addAndRemoveHref = function () {
-    if (window.matchMedia('(max-width: 1199px)').matches) {
+    if (window.matchMedia('(max-width: 1023px)').matches) {
       for (var i = 0; i < myProjectsLinks.length; i++) {
         myProjectsLinks[i].setAttribute('href', '#');
       }
