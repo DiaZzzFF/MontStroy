@@ -46,7 +46,7 @@
   }
 
   &--small {
-    max-width: 290px;
+    width: 24.75%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-size: 290px cover;
@@ -54,7 +54,7 @@
   }
 
   &--big {
-    max-width: 583px;
+    width: 49.75%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-size: 583px cover;
@@ -229,7 +229,7 @@
 
     &--small,
     &--big {
-      max-width: 100%;
+      width: 100%;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-size: 100% auto;
